@@ -1,0 +1,31 @@
+image: node:6
+
+stages:
+  - test
+  - deploy
+
+before_script:
+  - npm install
+
+cache:
+  paths:
+    - node_modules/
+
+test:
+  stage: test
+  script:
+    - npm run test
+  tags:
+    - msite
+
+pages:
+  stage: deploy
+  script:
+    - echo 'Nothing to do...'
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+  tags:
+    - msite

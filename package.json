@@ -1,0 +1,23 @@
+{
+  "name": "amp-boilerplate-basscss",
+  "version": "1.0.0",
+  "description": "A eazy way to start an AMP Page",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "node amp.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.msiteproject.com/bjimmy/amp-boilerplate-basscss.git"
+  },
+  "keywords": [
+    "AMP"
+  ],
+  "author": "SAO AMP - Team",
+  "license": "ISC",
+  "devDependencies": {
+    "amphtml-validator": "^1.0.23",
+    "gulp": "^4.0.2",
+    "live-server": "^1.2.0"
+  }
+}
