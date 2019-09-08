@@ -222,12 +222,16 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
       border-radius: 50%;
       border: none;
       outline: none;
-      background: var(--color-primary);
+      background-color: var(--color-primary);
       z-index: 9999;
       bottom: var(--space-2);
       right: var(--space-2);
       position: fixed;
       opacity: 1;
+      background-image: url("./img/WhatsApp-icone.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
     /*END SCROLL TO TOP*/
 
@@ -627,6 +631,6 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
         </div>
     </div>    
 </footer>
-<button id="scrollToTopButton" class="scrollToTop">⌃</button>
+<div id="scrollToTopdiv" class="scrollToTop"></div>
 </body>
 </html>
