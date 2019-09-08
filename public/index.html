@@ -50,7 +50,62 @@
     .bg-gray-top{
       background: var(--gray-top);
     }
+    .bg-white-2{
+      background: var(--white-2);
+    }
 /*END background*/
+/*FONTS INTER*/
+@font-face {
+font-family: 'Inter-SemiBold';
+font-style: normal;
+font-weight: normal;
+src: url('./font/inter/Inter-SemiBold.ttf') format('ttf');
+}
+.font-inter-semibold{
+  font-family: 'Inter-SemiBold';
+}
+/*END FONTS INTER*/
+/*FONTS N HAAS*/
+@font-face {
+font-family: 'Neue Haas Grotesk Text Pro Roman';
+font-style: normal;
+font-weight: normal;
+src: local('Neue Haas Grotesk Text Pro Roman'), url('./fonts/neue/NHaasGroteskTXPro-55Rg.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Neue Haas Grotesk Text Pro Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Neue Haas Grotesk Text Pro Italic'), url('./fonts/neue/NHaasGroteskTXPro-56It.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Neue Haas Grotesk Text Pro Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Neue Haas Grotesk Text Pro Bold'), url('./fonts/neue/NHaasGroteskTXPro-75Bd.woff') format('woff');
+}
+
+.font-neue-bold{
+  font-family: 'Neue Haas Grotesk Text Pro Bold';
+}
+
+
+@font-face {
+font-family: 'Neue Haas Grotesk Text Pro Bold Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGroteskTXPro-76BdIt.woff') format('woff');
+}
+/*END FONTS HAAS*/
+/*FONTS COLOR*/
+.c-gray{
+  color: #A6ADB4;
+}
+/*END FONTS COLOR*/
 /*FONT SIZE*/
 .h7{
   font-size: 2.75rem;
@@ -123,7 +178,7 @@
   color: white;
 }
 
-.hero-text button {
+.btn {
   outline: 0;
   display: inline-block;
   padding: 0.625rem 1.5625rem;
@@ -149,11 +204,12 @@
       width: 95%;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       text-align: left;
+      border-radius: 0.375rem;
     }
     
     div.container {
-      padding: 10px;
-      min-height: 9rem;
+      padding: 0.625rem;
+      min-height: 9.5rem;
     }
 
     /*SCROLL TO TOP*/
@@ -174,6 +230,17 @@
       opacity: 1;
     }
     /*END SCROLL TO TOP*/
+
+/*FORM*/
+.input{
+  width: 22.5rem;
+  height: 2.5rem;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 2px solid #000000;
+  border-radius: 6px;
+}
+/*END FORM*/
+
     </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
  
@@ -246,7 +313,6 @@
           <div class="mt1 ml3">
               <amp-img alt="logo" src="./img/logo.png" width="118" height="29" layout="fixed"></amp-img>
           </div>
-          
         </div>
         <div class="col col-6">
           <div class="xs-hide sm-hide">
@@ -282,14 +348,15 @@
     <section class="hero-image">
         <div class="hero-text">
           <h1 class="h7">Contabilidade com atendimento personalizado</h1>
-          <button class="mr1">Abrir Empresa</button>
-          <button class="ml1">Marcar Reunião</button>
+          <button class="mr1 btn">Abrir Empresa</button>
+          <button class="ml1 btn">Marcar Reunião</button>
         </div>
     </section>
     <main>
       <!--SERVIÇOS-->
-      <section class="wrapper pb4">
-        <div>
+    <section class="bg-white-2 pt1">  
+      <div class="wrapper pb4">
+        <div class="center">
           <h1>Serviços</h1>
         </div>
         <div class="clearfix">
@@ -303,8 +370,8 @@
                   alt="Contabilidade">
               </amp-img>
               <div class="container">
-                <h3>Contabilidade e paralegal</h3>
-                <p>
+                <h3 class="h3 font-neue-bold">Contabilidade e paralegal</h3>
+                <p class="font-inter-semibold h4 c-gray">
                     Escrituração contábil, área fiscal e departamento pessoal
                 </p>
               </div>
@@ -320,8 +387,8 @@
                   alt="Consultoria">
               </amp-img>
               <div class="container">
-                <h3>Consultoria</h3>
-                <p>
+                <h3 class="h3 font-neue-bold">Consultoria</h3>
+                <p class="font-inter-semibold h4 c-gray">
                     Aconselhamento financeiro e estratégico, diagnóstico de processos administrativos.
                 </p>
               </div>
@@ -337,18 +404,19 @@
                   alt="Assessoria">
                 </amp-img>
               <div class="container">
-                <h3>Assessoria financeira</h3>
-                <p>
+                <h3 class="h3 font-neue-bold">Assessoria financeira</h3>
+                <p class="font-inter-semibold h4 c-gray">
                     Implantação de financeiros, auditoria de controles e processos, terceirização de departamento financeiro
                 </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>  
       <!--END SERVIÇOS-->
       <!--Depoimentos-->
-      <section class="wrapper pb4">
+      <!-- <section class="wrapper pb4">
         <h1>Depoimentos</h1>
         <amp-carousel height="300"
         layout="fixed-height"
@@ -382,7 +450,7 @@
               </div>
           </div>
         </amp-carousel>
-      </section>  
+      </section>   -->
       <!--END Depoimentos-->
       <!--EBOOK-->
       <section class="wrapper pb4">
@@ -399,47 +467,39 @@
             </div>
             <div class="sm-col sm-col-12 md-col-12 lg-col-6">
               <div>
-                <h1>
+                <h2 class="h2">
                     Baixe gratuitamente nosso livro sobre Atendimento na Área Contábil
-                </h1>
+                </h2>
                 <h3>
                     A Pacífico produziu através de seu diretor Francisco Figueiredo um livro focado no atendimento ao cliente.
                 </h3>
               </div>
               <div>
-                  <form method="post"
-                    action-xhr="https://example.com/subscribe"  
-                    target="_top">
-                    <fieldset>
-                      <label>
-                        <span>Name:</span>
-                        <input type="text"
-                          name="name"
-                          required>
-                      </label>
-                      <br>
-                      <label>
-                        <span>Email:</span>
-                        <input type="email"
-                          name="email"
-                          required>
-                      </label>
-                      <br>
-                      <input type="submit"
-                        value="Subscribe">
-                    </fieldset>
-                    <div submit-success>
-                      <template type="amp-mustache">
-                        Livro enviado! Verifique seu e-mail.
-                      </template>
-                    </div>
-                    <div submit-error>
-                      <template type="amp-mustache">
-                        Tivemos algum problema no envio.
-                      </template>
-                    </div>
-                  </form>
-              </div>
+                <form method="post"
+                action-xhr="https://example.com/subscribe"  
+                target="_top">
+                <input type="text"
+                name="name"
+                required placeholder="Nome" class="input">
+                <br><br>
+                <input type="email"
+                name="email"
+                required placeholder="E-mail" class="input">
+                <br>
+                <input type="submit"
+                value="Enviar" class="btn mt2">
+                <div submit-success>
+                  <template type="amp-mustache">
+                    Livro enviado! Verifique seu e-mail.
+                  </template>
+                </div>
+                <div submit-error>
+                  <template type="amp-mustache">
+                    Tivemos algum problema no envio.
+                  </template>
+                </div>
+              </form>
+            </div>
             </div>
         </div>
       </section>
