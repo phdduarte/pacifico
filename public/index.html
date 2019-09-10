@@ -63,8 +63,11 @@
 font-family: 'Inter-SemiBold';
 font-style: normal;
 font-weight: normal;
-src: url('./font/inter/Inter-SemiBold.ttf') format('ttf');
+src: url('./fonts/inter/Inter-SemiBold.ttf') format('ttf');
+src: url('./fonts/inter/Inter-SemiBold.otf') format('otf');
+src: url('./fonts/inter/Inter-SemiBold.woff') format('woff');
 }
+
 .font-inter-semibold{
   font-family: 'Inter-SemiBold';
 }
@@ -103,6 +106,9 @@ font-family: 'Neue Haas Grotesk Text Pro Bold Italic';
 font-style: normal;
 font-weight: normal;
 src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGroteskTXPro-76BdIt.woff') format('woff');
+}
+.font-helvetica{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /*END FONTS HAAS*/
 /*FONTS COLOR*/
@@ -203,6 +209,11 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
   border: none;
   border-radius: 1.25rem;
   background-color: var(--yellow-2);
+}
+
+.btn-enviar {
+    padding-left: 2.9375rem;
+    padding-right: 2.9375rem;
 }
 
     .wrapper{
@@ -526,9 +537,13 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
     </header>
     <section class="hero-image">
         <div class="hero-text">
-          <h1 class="h7">Contabilidade com atendimento personalizado</h1>
-          <button class="mr1 btn">Abrir Empresa</button>
-          <button class="ml1 btn">Marcar Reunião</button>
+          <div class="font-neue-bold">
+              <h1 class="h7">Contabilidade<br> com atendimento<br> personalizado</h1>
+          </div>
+          <div class="">
+            <button class="mr1 btn font-inter-semibold">Abrir Empresa</button>
+            <button class="ml1 btn">Marcar Reunião</button>
+        </div>
         </div>
     </section>
     <main>
@@ -536,7 +551,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
     <section class="bg-white-2 pt1">  
       <div class="wrapper pb4">
         <div class="center">
-          <h1>Serviços</h1>
+          <h1 class="font-neue-bold">Serviços</h1>
         </div>
         <div class="clearfix">
           <div class="sm-col sm-col-12 md-col-12 lg-col-4">
@@ -646,12 +661,12 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
             </div>
             <div class="sm-col sm-col-12 md-col-12 lg-col-6">
               <div>
-                <h2 class="h2">
+                <h2 class="h2 font-neue-bold">
                     Baixe gratuitamente nosso livro sobre Atendimento na Área Contábil
                 </h2>
-                <h3>
+                <!-- <h3>
                     A Pacífico produziu através de seu diretor Francisco Figueiredo um livro focado no atendimento ao cliente.
-                </h3>
+                </h3> -->
               </div>
               <div>
                 <form method="post"
@@ -659,14 +674,14 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
                 target="_top">
                 <input type="text"
                 name="name"
-                required placeholder="Nome" class="input">
+                required placeholder="Nome" class="input font-inter-semibold">
                 <br><br>
                 <input type="email"
                 name="email"
-                required placeholder="E-mail" class="input">
+                required placeholder="E-mail" class="input font-inter-semibold">
                 <br>
                 <input type="submit"
-                value="Enviar" class="btn mt2">
+                value="Enviar" class="btn mt2 font-inter-semibold px2 btn-enviar">
                 <div submit-success>
                   <template type="amp-mustache">
                     Livro enviado! Verifique seu e-mail.
@@ -687,7 +702,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
       <div class="bg-white-2 xs-hide sm-hide">
         <section class="wrapper pb4">
           <div class="center py3">
-            <h1>Benefícios da Pacífico Contabilidade</h1>
+            <h1 class="h1 font-neue-bold">Benefícios da Pacífico Contabilidade</h1>
           </div>
           <div class="clearfix">
             <div class="sm-col sm-col-4 md-col-4 lg-col-4">
@@ -708,7 +723,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
                 </div>
               </div>
               <div>
-                <h3>Atendimento</br>personalizado</h3>
+                <h3 class="h3 font-neue-bold">Atendimento</br>personalizado</h3>
               </div>
             </div>
             <div class="sm-col sm-col-4 md-col-4 lg-col-4">
@@ -729,7 +744,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
                 </div>
               </div>
               <div>
-                <h3>Resultados</br>Comprovados</h3>
+                  <h3 class="h3 font-neue-bold">Resultados</br>Comprovados</h3>
               </div>
             </div>
             <div class="sm-col sm-col-4 md-col-4 lg-col-4">
@@ -754,7 +769,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
                 </div>
               </div>
               <div>
-                <h3>Vamos além </br> da contabilidade</h3>
+                  <h3 class="h3 font-neue-bold">Vamos além </br> da contabilidade</h3>
               </div>
             </div>
 
@@ -767,7 +782,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
         <div class="clearfix">
           <div class="sm-col sm-col-12 md-col-12 lg-col-6">
             <div class="p2">
-                <h1>Onde estamos</h1>
+                <h1 class="h1 font-neue-bold">Onde estamos</h1>
                 <amp-iframe width="200" height="100"
                 sandbox="allow-scripts allow-same-origin"
                 layout="responsive"
@@ -778,21 +793,21 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
           </div> 
           <div class="sm-col sm-col-12 md-col-12 lg-col-6">
             <div class="p2">
-              <h1>Contato</h1>
+              <h1 class="h1 font-neue-bold">Contato</h1>
               <div>
                   <form method="post"
                   action-xhr="https://example.com/subscribe"  
                   target="_top"
                   id="usrform">
-                      <input class="input mb1" type="text" name="name" required placeholder="Nome">
+                      <input class="input mb1 font-inter-semibold" type="text" name="name" required placeholder="Nome">
                     <br>
-                      <input class="input mb1" type="email" name="email" required placeholder="Email">
+                      <input class="input mb1 font-inter-semibold" type="email" name="email" required placeholder="Email">
                     <br>    
-                      <input class="input mb1" type="text" name="assunto" required placeholder="Assunto">
+                      <input class="input mb1 font-inter-semibold" type="text" name="assunto" required placeholder="Assunto">
                     <br>    
-                      <textarea class="input mb1 pt1 pb4" rows="10" cols="33" name="mensagem" placeholder="Mensagem"></textarea>
+                      <textarea class="input mb1 font-inter-semibold pt1 pb4" rows="10" cols="33" name="mensagem" placeholder="Mensagem"></textarea>
                     <br>
-                    <input type="submit" value="Enviar" class="btn">
+                    <input type="submit" value="Enviar" class="btn btn-enviar">
                   <div submit-success>
                     <template type="amp-mustache">
                       Contato enviado com sucesso.
@@ -819,19 +834,19 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
           <div class="sm-col sm-col-6 md-col-6 lg-col-6">
               <div class="sm-col sm-col-6 md-col-6 lg-col-6">
                   <div>
-                    <a class="c-gray-4 text-decoration-none h13" href="./index.html">Home</a>
+                    <a class="c-gray-4 text-decoration-none h13 font-helvetica bold" href="./index.html">Home</a>
                   </div>
                   <div>
-                    <a class="c-gray-4 text-decoration-none h13" href="./servicos.html">Serviços</a>       
+                    <a class="c-gray-4 text-decoration-none h13 font-helvetica bold" href="./servicos.html">Serviços</a>       
                   </div>
-                </div>  
-                <div class="sm-col sm-col-6 md-col-6 lg-col-6">
-                  <div>
-                    <a class="c-gray-4 text-decoration-none h13" href="./cnpj">Abrir CNPJ</a> 
-                  </div>
-                  <div>
-                    <a class="c-gray-4 text-decoration-none h13" href="./contato.html">Contato</a> 
-                  </div>
+              </div>  
+              <div class="sm-col sm-col-6 md-col-6 lg-col-6">
+                <div>
+                  <a class="c-gray-4 text-decoration-none h13 font-helvetica bold" href="./cnpj">Abrir CNPJ</a> 
+                </div>
+                <div>
+                  <a class="c-gray-4 text-decoration-none h13 font-helvetica bold" href="./contato.html">Contato</a> 
+                </div>
               </div>
           </div>
           <div class="sm-col sm-col-6 md-col-6 lg-col-6">
