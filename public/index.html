@@ -549,7 +549,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
     <main>
       <!--SERVIÇOS-->
     <section class="bg-white-2 pt1">  
-      <div class="wrapper pb4">
+      <div class="wrapper py4">
         <div class="center">
           <h1 class="font-neue-bold">Serviços</h1>
         </div>
@@ -647,60 +647,64 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
       </section>   -->
       <!--END Depoimentos-->
       <!--EBOOK-->
-      <section class="wrapper pb4">
+      <section class="wrapper py4">
         <div class="clearfix">
-            <div class="sm-col sm-col-12 md-col-12 lg-col-6">
-              <div class="center">
-                <amp-img src="./img/book.png"
-                width="243"
-                height="351"
-                layout="fixed"
-                alt="Assessoria">
-                </amp-img>
-              </div>  
-            </div>
-            <div class="sm-col sm-col-12 md-col-12 lg-col-6">
-              <div>
-                <h2 class="h2 font-neue-bold">
+              <div class="sm-col sm-col-12 md-col-12 lg-col-4">
+                <div class="pr4">
+                  <div class="left">
+                    <amp-img src="./img/book.png"
+                    width="243"
+                    height="351"
+                    layout="fixed"
+                    alt="Assessoria">
+                    </amp-img>
+                  </div>  
+                </div>
+            </div>  
+            <div class="sm-col sm-col-12 md-col-12 lg-col-8">
+              <div class="px4">
+                <div>
+                  <h2 class="h2 font-neue-bold">
                     Baixe gratuitamente nosso livro sobre Atendimento na Área Contábil
-                </h2>
-                <!-- <h3>
+                  </h2>
+                  <!-- <h3>
                     A Pacífico produziu através de seu diretor Francisco Figueiredo um livro focado no atendimento ao cliente.
-                </h3> -->
+                  </h3> -->
+                </div>
+                <div>
+                  <form method="post"
+                  action-xhr="https://example.com/subscribe"  
+                  target="_top">
+                  <input type="text"
+                  name="name"
+                  required placeholder="Nome" class="input font-inter-semibold">
+                  <br><br>
+                  <input type="email"
+                  name="email"
+                  required placeholder="E-mail" class="input font-inter-semibold">
+                  <br>
+                  <input type="submit"
+                  value="Enviar" class="btn mt2 font-inter-semibold px2 btn-enviar">
+                  <div submit-success>
+                    <template type="amp-mustache">
+                      Livro enviado! Verifique seu e-mail.
+                    </template>
+                  </div>
+                  <div submit-error>
+                    <template type="amp-mustache">
+                      Tivemos algum problema no envio.
+                    </template>
+                  </div>
+                  </form>
+                </div>
               </div>
-              <div>
-                <form method="post"
-                action-xhr="https://example.com/subscribe"  
-                target="_top">
-                <input type="text"
-                name="name"
-                required placeholder="Nome" class="input font-inter-semibold">
-                <br><br>
-                <input type="email"
-                name="email"
-                required placeholder="E-mail" class="input font-inter-semibold">
-                <br>
-                <input type="submit"
-                value="Enviar" class="btn mt2 font-inter-semibold px2 btn-enviar">
-                <div submit-success>
-                  <template type="amp-mustache">
-                    Livro enviado! Verifique seu e-mail.
-                  </template>
-                </div>
-                <div submit-error>
-                  <template type="amp-mustache">
-                    Tivemos algum problema no envio.
-                  </template>
-                </div>
-              </form>
-            </div>
-            </div>
+            </div>  
         </div>
       </section>
       <!--END EBOOK-->
       <!--Beneficios-->
       <div class="bg-white-2 xs-hide sm-hide">
-        <section class="wrapper pb4">
+        <section class="wrapper py4">
           <div class="center py3">
             <h1 class="h1 font-neue-bold">Benefícios da Pacífico Contabilidade</h1>
           </div>
@@ -778,7 +782,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
       </div>  
       <!--END Beneficios-->
       <!--Contato-->
-      <section class="wrapper pb4">
+      <section class="wrapper py4">
         <div class="clearfix">
           <div class="sm-col sm-col-12 md-col-12 lg-col-6">
             <div class="p2">
@@ -827,7 +831,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
       <!--END Contato-->
 </main>
 <footer class="bg-gray-footer">
-  <div class="wrapper pb4 pt3">
+  <div class="wrapper py4 pt3">
     <div class="clearfix">
       <div class="sm-col sm-col-8 md-col-8 lg-col-8">
         <div class="clearfix">
