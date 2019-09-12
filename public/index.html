@@ -226,6 +226,23 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
   background-color: var(--yellow-2);
 }
 
+.form input[type="submit"]{
+  outline: 0;
+  display: inline-block;
+  padding: 0.625rem 1.5625rem;
+  text-align: center;
+  cursor: pointer;
+  /* Text styles */
+  color: var(--black);
+  text-decoration: none;
+  font-size: 0.7em;
+  font-weight: 600;
+  /* Border styles */
+  border: none;
+  border-radius: 1.25rem;
+  background-color: var(--yellow-2);
+}
+
 .btn-enviar {
     padding-left: 2.9375rem;
     padding-right: 2.9375rem;
@@ -813,7 +830,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
           <div class="sm-col sm-col-12 md-col-12 lg-col-6">
             <div class="">
               <h1 class="h1 font-neue-bold">Contato</h1>
-              <div>
+              <div class="form">
                   <form method="post"
                   action-xhr="https://example.com/subscribe"  
                   target="_top"
