@@ -226,7 +226,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
   background-color: var(--yellow-2);
 }
 
-.form input[type="submit"]{
+button{
   outline: 0;
   display: inline-block;
   padding: 0.625rem 1.5625rem;
@@ -249,7 +249,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
 }
 
     .wrapper{
-      max-width: 80%;
+      max-width: 85%;
       margin: 0 auto;
     }  
 
@@ -295,7 +295,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
 
 /*FORM*/
 .input{
-  width: 100%;
+  width: 95%;
   height: 2.5rem;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 2px solid #000000;
@@ -686,7 +686,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
       <section class="wrapper py4">
         <div class="clearfix">
             <div class="col sm-col-12 md-col-12 lg-col-4">
-                <div class="center">
+                <div class="">
                     <amp-img src="./img/book.png"
                     width="243"
                     height="351"
@@ -696,40 +696,41 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
                 </div>  
             </div>  
             <div class="col sm-col-12 md-col-12 lg-col-8">
-                <div class="">
-                  <h2 class="h2 font-neue-bold">
-                    Baixe gratuitamente nosso livro sobre Atendimento na Área Contábil
-                  </h2>
-                  <h3>
-                    A Pacífico produziu através de seu diretor Francisco Figueiredo um livro focado no atendimento ao cliente.
-                  </h3>
-                </div>
-                <div>
-                  <form method="post"
-                  action-xhr="https://example.com/subscribe"  
-                  target="_top">
-                    <input type="text"
-                    name="name"
-                    required placeholder="Nome" class="input font-inter-semibold">
-                    <br><br>
-                    <input type="email"
-                    name="email"
-                    required placeholder="E-mail" class="input font-inter-semibold">
-                    <br>
-                    <input type="submit"
-                    value="Enviar" class="btn mt2 font-inter-semibold px2 btn-enviar">
-                    <div submit-success>
-                        <template type="amp-mustache">
-                        Livro enviado! Verifique seu e-mail.
-                        </template>
-                    </div>
-                    <div submit-error>
-                        <template type="amp-mustache">
-                        Tivemos algum problema no envio.
-                        </template>
-                    </div>
-                  </form>
-                </div>
+              <div class="lg-w-90">
+                  <div class="">
+                    <h2 class="h2 font-neue-bold">
+                      Baixe gratuitamente nosso livro sobre Atendimento na Área Contábil
+                    </h2>
+                    <h3>
+                      A Pacífico produziu através de seu diretor Francisco Figueiredo um livro focado no atendimento ao cliente.
+                    </h3>
+                  </div>
+                  <div>
+                    <form method="post"
+                    action-xhr="https://example.com/subscribe"  
+                    target="_top">
+                      <input type="text"
+                      name="name"
+                      required placeholder="Nome" class="input font-inter-semibold">
+                      <br><br>
+                      <input type="email"
+                      name="email"
+                      required placeholder="E-mail" class="input font-inter-semibold">
+                      <br>
+                      <button type="submit" class="btn mt2 font-inter-semibold px2 btn-enviar">Enviar</button>
+                      <div submit-success>
+                          <template type="amp-mustache">
+                          Livro enviado! Verifique seu e-mail.
+                          </template>
+                      </div>
+                      <div submit-error>
+                          <template type="amp-mustache">
+                          Tivemos algum problema no envio.
+                          </template>
+                      </div>
+                    </form>
+                  </div>
+                </div>  
             </div>
         </div>  
       </section>
@@ -841,9 +842,9 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
                     <br>    
                       <input class="input mb1 font-inter-semibold" type="text" name="assunto" required placeholder="Assunto">
                     <br>    
-                      <textarea class="input mb1 font-inter-semibold pt1 pb4" rows="10" cols="33" name="mensagem" placeholder="Mensagem"></textarea>
+                      <textarea class="input mb1 font-inter-semibold pt1 pb4" rows="10" cols="33" name="mensagem" placeholder="Mensagem" style="width: 94%;"></textarea>
                     <br>
-                    <input type="submit" value="Enviar" class="btn btn-enviar">
+                    <button type="submit" class="btn mt2 font-inter-semibold px2 btn-enviar">Enviar</button>
                   <div submit-success>
                     <template type="amp-mustache">
                       Contato enviado com sucesso.
