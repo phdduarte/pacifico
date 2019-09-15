@@ -81,8 +81,9 @@
       --gray-top: #EDEDED;
       --gray-footer: #A6ADB4;
       --blue: #00499e;
+      --blue-2: #1362AC;
       --green: #25d366;
-
+      
       --color-primary: #25D366;
       --color-secondary: #00DCC0;
       --color-text-light: #fff;
@@ -102,6 +103,9 @@
     }
     .bg-white-2{
       background: var(--white-2);
+    }
+    .bg-blue-2{
+      background: var(--blue-2);
     }
 /*END background*/
 /*FONTS INTER*/
@@ -167,6 +171,9 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
 .c-black-2{
   color: var(--black-2);
 }
+.c-white{
+    color: white;
+}
 /*END FONTS COLOR*/
 /*FONT SIZE*/
 .h13{
@@ -183,8 +190,7 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
       z-index: 2;
     }
     #sidebar{
-      background-color: #2985e8;
-      width: 80%;
+      width: 100%;
     }
     ​
     #sidebar a{
@@ -193,13 +199,9 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
     ​
     .ampstart-btn{
       background: transparent;
-    }
-    ​
-    .bar{
-      width: 25px;
-      height: 2px;
-      background-color: rgb(153, 153, 153);
-      margin: 4px 0;
+      width: 1.667rem;
+      height: 1.5rem;
+      color: #00499e
     }
     
     body,html {
@@ -554,25 +556,25 @@ button{
         }
       </script>
     </amp-analytics>
-    <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+    <amp-sidebar id="sidebar" class="bg-blue-2" layout="nodisplay" side="right">
       <div class="" on="tap:sidebar.close" role="button" tabindex="0">
         <span class="">
           <i class="fas fa-times"></i>
         </span>
       </div>
       <div class="">
-        <ul class="list-reset">
-          <li class=""><a href="" class="text-decoration-none">HOME</a></li>
-          <li class=""><a href="" class="text-decoration-none">SERVIÇO</a></li>
-          <li class=""><a href="" class="text-decoration-none">ABRIR CNPJ</a></li>
-          <li class=""><a href="" class="text-decoration-none">CONTATO</a></li>
+        <ul class="list-reset center">
+          <li class="py2"><a href="" class="text-decoration-none c-white font-helvetica bold h2">HOME</a></li>
+          <li class="py2"><a href="" class="text-decoration-none c-white font-helvetica bold h2">SERVIÇO</a></li>
+          <li class="py2"><a href="" class="text-decoration-none c-white font-helvetica bold h2">ABRIR CNPJ</a></li>
+          <li class="py2"><a href="" class="text-decoration-none c-white font-helvetica bold h2">CONTATO</a></li>
         </ul>
       </div>
     </amp-sidebar>
     <header class="bg-gray-top">
       <div class="clearfix">
         <div class="col col-6">
-          <div class="mt1 ml3">
+          <div class="mt1 pl3">
               <amp-img alt="logo" src="./img/logo.png" width="118" height="29" layout="fixed"></amp-img>
           </div>
         </div>
@@ -598,11 +600,9 @@ button{
             </div>
           </div>
           <div class="right-align md-hide lg-hide">
-            <button on="tap:sidebar.toggle" class="ampstart-btn">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </button>
+            <div on="tap:sidebar.toggle" class="ampstart-btn p1 pr3">            
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" style="width: 1.667rem;height:1.5rem;color:#00499e;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+            </div>
           </div>
         </div>
       </div>   
@@ -613,7 +613,7 @@ button{
               <h1 class="h7">Contabilidade com atendimento personalizado</h1>
           </div>
           <div class="">
-            <button class="mr1 btn font-inter-semibold">Abrir Empresa</button>
+            <button class="mr1 btn font-inter-semibold button">Abrir Empresa</button>
         </div>
         </div>
     </section>
@@ -752,7 +752,7 @@ button{
                       name="email"
                       required placeholder="E-mail" class="input font-inter-semibold">
                       <br>
-                      <button type="submit" class="btn mt2 font-inter-semibold px2 btn-enviar">Enviar</button>
+                      <button type="submit" class="button btn mt2 font-inter-semibold px2 btn-enviar">Enviar</button>
                       <div submit-success>
                           <template type="amp-mustache">
                           Livro enviado! Verifique seu e-mail.
@@ -881,7 +881,7 @@ button{
                     <br>    
                       <textarea class="input mb2 font-inter-semibold pt1 pb4" rows="10" cols="33" name="mensagem" placeholder="Mensagem" style="width: 99.5%;"></textarea>
                     <br>
-                    <button type="submit" class="btn mt2 font-inter-semibold px2 btn-enviar">Enviar</button>
+                    <button type="submit" class="btn mt2 font-inter-semibold px2 btn-enviar button">Enviar</button>
                   <div submit-success>
                     <template type="amp-mustache">
                       Contato enviado com sucesso.
