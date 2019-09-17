@@ -326,12 +326,22 @@ button{
     /*END SCROLL TO TOP*/
 
 /*FORM*/
-.input{
-  width: 97%;
+/* .input{
+  width: 100%;
   height: 2.5rem;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 2px solid #000000;
   border-radius: 6px;
+} */
+
+input[type=text],input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 /*END FORM*/
 /*ICONES beneficios*/
@@ -881,7 +891,7 @@ button{
                     <br>    
                       <input class="input mb2 font-inter-semibold" type="text" name="assunto" required placeholder="Assunto">
                     <br>    
-                      <textarea class="input mb2 font-inter-semibold pt1 pb4" rows="10" cols="33" name="mensagem" placeholder="Mensagem" style="width: 99%;"></textarea>
+                      <input class="input mb2 font-inter-semibold" type="text" name="mensagem" required placeholder="Mensagem">
                     <br>
                     <button type="submit" class="btn mt2 font-inter-semibold px2 btn-enviar button">Enviar</button>
                   <div submit-success>
