@@ -30,7 +30,7 @@ try {
     //Server settings
     $mail->SMTPDebug = 0;                                       // Enable verbose debug output
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'email-ssl.com.br';  // Specify main and backup SMTP servers
+    $mail->Host       = 'smtp.pacificocontabilidade.com.br';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'ffigueiredo@pacificocontabilidade.com.br';                     // SMTP username
     $mail->Password   = 'k*z$Bb89';                               // SMTP password
