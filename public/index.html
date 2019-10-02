@@ -343,6 +343,16 @@ input[type=text],input[type=email] {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+textarea {
+  width: 100%;
+  padding: 12px 20px 40px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 /*END FORM*/
 /*ICONES beneficios*/
 #Grupo_68 {
@@ -631,7 +641,7 @@ input[type=text],input[type=email] {
             </div>
           </div>
           <div class="right-align md-hide lg-hide">
-            <div on="tap:sidebar.toggle"  role="button" tabindex="buttons" class="ampstart-btn p1 pr3<form"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" style="width: 1.8rem;height:1.8rem;color:#00499e;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+            <div on="tap:sidebar.toggle"  role="button" tabindex="buttons" class="ampstart-btn p1 pr3 form"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" style="width: 1.8rem;height:1.8rem;color:#00499e;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
             </div>
           </div>
         </div>
@@ -916,7 +926,7 @@ input[type=text],input[type=email] {
                     <br>    
                       <input class="input mb2 font-inter-semibold" type="text" name="assunto" required placeholder="Assunto">
                     <br>    
-                      <input class="input mb2 font-inter-semibold" type="text" name="mensagem" required placeholder="Mensagem">
+                      <textarea class="input mb2 font-inter-semibold" name="mensagem" required placeholder="Mensagem"></textarea>
                     <br>
                     <button type="submit" class="btn mt2 font-inter-semibold px2 btn-enviar button">Enviar</button>
                     <div submit-success>
