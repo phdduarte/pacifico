@@ -8,10 +8,10 @@ header("access-control-expose-headers:AMP-Redirect-To,AMP-Access-Control-Allow-S
 header("AMP-Access-Control-Allow-Source-Origin:".$_SERVER['HTTP_ORIGIN']);
 header("Content-Type: application/json");
 
-
 $name = $_POST["nome"];
 $email = $_POST["email"];
-$tel = $_POST["tel"];
+$assunto = $_POST["assunto"];
+$msg = $_POST["mensagem"];
 
 
 // Load Composer's autoloader
@@ -28,14 +28,14 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = 0;                                       // Enable verbose debug output
-    $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.pacificocontabilidade.com.br';  // Specify main and backup SMTP servers
-    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'ffigueiredo@pacificocontabilidade.com.br';                     // SMTP username
-    $mail->Password   = 'k*z$Bb89';                               // SMTP password
-    //$mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->SMTPDebug = 0;                                      
+    $mail->isSMTP();                                            
+    $mail->Host       = 'email-ssl.com.br';  
+    $mail->SMTPAuth   = true;                                  
+    $mail->Username   = 'ffigueiredo@pacificocontabilidade.com.br';                     
+    $mail->Password   = 'k*z$Bb89';                              
+    $mail->SMTPSecure = 'ssl';                                  
+    $mail->Port       = 465;                                    
 
     //Recipients
     $mail->setFrom('ffigueiredo@pacificocontabilidade.com.br', 'SITE');
@@ -51,8 +51,8 @@ try {
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Lead recebido do SITE - ' . $name;
-    $mail->Body    = 'NOME: ' . $name . '<br>' . 'E-MAIL: ' . $email . '<br>' . 'TELEFONE: ' . $tel;
+    $mail->Subject = 'Lead recebido do SITE - ' . $name . ': '. $assunto;
+    $mail->Body    = 'NOME: ' . $name . '<br>' . 'E-MAIL: ' . $email . '<br>' . 'Mensagem: ' . $msg;
     //$mail->AltBody = 'TELEFONE:';
 
     $mail->send();

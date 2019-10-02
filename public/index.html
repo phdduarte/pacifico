@@ -517,6 +517,25 @@ input[type=text],input[type=email] {
 .text-shadow{
   text-shadow: 0px 3px 6px #00000029;
 }
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
 </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
  
@@ -754,9 +773,7 @@ input[type=text],input[type=email] {
                     </h3>
                   </div>
                   <div>
-                    <form method="post"
-                    action-xhr="./smtp.php"  
-                    target="_top">
+                    <form id="testForm" method="post" action-xhr="./smtp.php" target="_top">
                       <input type="text"
                       name="nome"
                       required placeholder="Nome" class="input font-inter-semibold">
@@ -768,7 +785,9 @@ input[type=text],input[type=email] {
                       <button type="submit" class="button btn mt2 font-inter-semibold px2 btn-enviar">Enviar</button>
                       <div submit-success>
                           <template type="amp-mustache">
-                          Livro enviado! Verifique seu e-mail.
+                            <div class="m1 alert alert-success" role="alert">
+                              Entraremos em contato
+                            </div>
                           <!--div>
                               <a href="./v1/img/mentiras.pdf"><button>DOWNLOAD</button></a>
                           </div-->
@@ -776,7 +795,9 @@ input[type=text],input[type=email] {
                       </div>
                       <div submit-error>
                           <template type="amp-mustache">
-                          Tivemos algum problema no envio.
+                            <div class="m1 alert alert-danger" role="alert">
+                              Sua mensagem não foi enviada, tente novamente.
+                            </div>
                           </template>
                       </div>
                     </form>
@@ -886,10 +907,10 @@ input[type=text],input[type=email] {
               <h1 class="h1 font-neue-bold">Contato</h1>
               <div class="form">
                   <form method="post"
-                  action-xhr="https://www.pacificocontabilidade.com.br/v1/smtp.php"  
+                  action-xhr="./smtp.php"  
                   target="_top"
                   id="usrform">
-                      <input class="input mb2 font-inter-semibold" type="text" name="name" required placeholder="Nome">
+                      <input class="input mb2 font-inter-semibold" type="text" name="nome" required placeholder="Nome">
                     <br>
                       <input class="input mb2 font-inter-semibold" type="email" name="email" required placeholder="Email">
                     <br>    
@@ -898,16 +919,23 @@ input[type=text],input[type=email] {
                       <input class="input mb2 font-inter-semibold" type="text" name="mensagem" required placeholder="Mensagem">
                     <br>
                     <button type="submit" class="btn mt2 font-inter-semibold px2 btn-enviar button">Enviar</button>
-                  <div submit-success>
-                    <template type="amp-mustache">
-                      Contato enviado com sucesso.
-                    </template>
-                  </div>
-                  <div submit-error>
-                    <template type="amp-mustache">
-                      Tivemos algum problema no envio.
-                    </template>
-                  </div>
+                    <div submit-success>
+                        <template type="amp-mustache">
+                          <div class="m1 alert alert-success" role="alert">
+                            Entraremos em contato
+                          </div>
+                        <!--div>
+                            <a href="./v1/img/mentiras.pdf"><button>DOWNLOAD</button></a>
+                        </div-->
+                        </template>
+                    </div>
+                    <div submit-error>
+                        <template type="amp-mustache">
+                          <div class="m1 alert alert-danger" role="alert">
+                            Sua mensagem não foi enviada, tente novamente.
+                          </div>
+                        </template>
+                    </div>
                 </form>
               </div>  
             </div>  
