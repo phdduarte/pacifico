@@ -77,7 +77,7 @@
       --gray-3: #0000006b;
       --gray-4: #cbd0d3;
       --gray-5: #0000003d;
-      --gray-top: #EDEDED;
+      --gray-top: #051C2C;
       --gray-footer: #A6ADB4;
       --blue: #00499e;
       --blue-2: #1362AC;
@@ -96,9 +96,6 @@
 /*Background*/
     .bg-gray-top{
       background: var(--gray-top);
-    }
-    .bg-gray-footer{
-      background: var(--gray-footer);
     }
     .bg-white-2{
       background: var(--white-2);
@@ -233,13 +230,13 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
     }
     
     .hero-text {
-  text-align: left;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
+      text-align: left;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #051C2C;
+    }
 
 .btn {
   outline: 0;
@@ -248,14 +245,14 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
   text-align: center;
   cursor: pointer;
   /* Text styles */
-  color: var(--black);
+  color: var(--white);
   text-decoration: none;
   font-size: 0.7em;
   font-weight: 600;
   /* Border styles */
   border: none;
   border-radius: 1.25rem;
-  background-color: var(--yellow-2);
+  background-color: var(--gray-top);
 }
 
 button{
@@ -324,15 +321,6 @@ button{
       background-repeat: no-repeat;
     }
     /*END SCROLL TO TOP*/
-
-/*FORM*/
-/* .input{
-  width: 100%;
-  height: 2.5rem;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  border: 2px solid #000000;
-  border-radius: 6px;
-} */
 
 input[type=text],input[type=email] {
   width: 100%;
@@ -607,7 +595,7 @@ textarea {
         <ul class="list-reset center">
           <li class="py2"><a href="./index.html" class="text-decoration-none c-white font-helvetica bold h2">HOME</a></li>
           <li class="py2"><a href="#servico" class="text-decoration-none c-white font-helvetica bold h2">SERVIÇO</a></li>
-          <li class="py2"><a href="https://api.whatsapp.com/send?phone=5511975858673&text=Oi,%20gostaria%20de%20abrir%20meu%20CNPJ" class="text-decoration-none c-white font-helvetica bold h2">ABRIR CNPJ</a></li>
+          <li class="py2"><a href="https://api.whatsapp.com/send?phone=5511964148654&text=Oi,%20gostaria%20de%20abrir%20meu%20CNPJ" class="text-decoration-none c-white font-helvetica bold h2">ABRIR CNPJ</a></li>
           <li class="py2"><a href="#contato" class="text-decoration-none c-white font-helvetica bold h2">CONTATO</a></li>
         </ul>
       </div>
@@ -631,7 +619,7 @@ textarea {
                     <a class="text-decoration-none font-helvetica c-gray" href="#servico">SERVIÇO</a>
                   </li>
                   <li id="menu-item-3" class="inline-block px1">
-                    <a class="text-decoration-none font-helvetica c-gray" href="https://api.whatsapp.com/send?phone=5511975858673&text=Oi,%20gostaria%20de%20abrir%20meu%20CNPJ">ABRIR CNPJ</a>
+                    <a class="text-decoration-none font-helvetica c-gray" href="https://api.whatsapp.com/send?phone=5511964148654&text=Oi,%20gostaria%20de%20abrir%20meu%20CNPJ">ABRIR CNPJ</a>
                   </li>
                   <li id="menu-item-4" class="inline-block px1">
                     <a class="text-decoration-none font-helvetica c-gray" href="#contato">CONTATO</a>
@@ -641,7 +629,7 @@ textarea {
             </div>
           </div>
           <div class="right-align md-hide lg-hide">
-            <div on="tap:sidebar.toggle"  role="button" tabindex="buttons" class="ampstart-btn p1 pr3 form"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" style="width: 1.8rem;height:1.8rem;color:#00499e;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+            <div on="tap:sidebar.toggle"  role="button" tabindex="buttons" class="ampstart-btn p1 pr3 form"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" style="width: 1.8rem;height:1.8rem;color:#fff;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
             </div>
           </div>
         </div>
@@ -653,7 +641,7 @@ textarea {
               <h1 class="h7 text-shadow">Contabilidade com atendimento personalizado</h1>
           </div>
           <div class="">
-            <a href="https://api.whatsapp.com/send?phone=5511975858673&text=Oi,%20gostaria%20de%20abrir%20minha%20empresa">
+            <a href="https://api.whatsapp.com/send?phone=5511964148654&text=Oi,%20gostaria%20de%20abrir%20minha%20empresa">
               <button class="mr1 btn font-inter-semibold button">Abrir Empresa</button>
             </a>  
         </div>
@@ -678,7 +666,7 @@ textarea {
               </amp-img>
               <div class="container">
                 <h3 class="h3 font-neue-bold">Contabilidade e paralegal</h3>
-                <p class="font-inter-semibold h4 c-gray">
+                <p class="font-inter-semibold h4">
                     Escrituração contábil, área fiscal e departamento pessoal
                 </p>
               </div>
@@ -695,7 +683,7 @@ textarea {
               </amp-img>
               <div class="container">
                 <h3 class="h3 font-neue-bold">Consultoria</h3>
-                <p class="font-inter-semibold h4 c-gray">
+                <p class="font-inter-semibold h4">
                     Aconselhamento financeiro e estratégico, diagnóstico de processos administrativos.
                 </p>
               </div>
@@ -712,7 +700,7 @@ textarea {
                 </amp-img>
               <div class="container">
                 <h3 class="h3 font-neue-bold">Assessoria financeira</h3>
-                <p class="font-inter-semibold h4 c-gray">
+                <p class="font-inter-semibold h4">
                     Implantação de financeiros, auditoria de controles e processos, terceirização de departamento financeiro
                 </p>
               </div>
@@ -759,64 +747,6 @@ textarea {
         </amp-carousel>
       </section>   -->
       <!--END Depoimentos-->
-      <!--EBOOK-->
-      <section class="wrapper py4">
-        <div class="clearfix">
-            <div class="col sm-col-12 md-col-12 lg-col-4">
-                <div class="">
-                    <amp-img src="./img/book.png"
-                    width="243"
-                    height="351"
-                    layout="fixed"
-                    alt="Assessoria">
-                    </amp-img>
-                </div>  
-            </div>  
-            <div class="col sm-col-12 md-col-12 lg-col-8">
-              <div class="lg-w-90">
-                  <div class="">
-                    <h2 class="h2 font-neue-bold">
-                      Baixe gratuitamente nosso livro sobre Atendimento na Área Contábil
-                    </h2>
-                    <h3>
-                      A Pacífico produziu através de seu diretor Francisco Figueiredo um livro focado no atendimento ao cliente.
-                    </h3>
-                  </div>
-                  <div>
-                    <form id="testForm" method="post" action-xhr="./smtp.php" target="_top">
-                      <input type="text"
-                      name="nome"
-                      required placeholder="Nome" class="input font-inter-semibold">
-                      <br><br>
-                      <input type="email"
-                      name="email"
-                      required placeholder="E-mail" class="input font-inter-semibold">
-                      <br>
-                      <button type="submit" class="button btn mt2 font-inter-semibold px2 btn-enviar">Enviar</button>
-                      <div submit-success>
-                          <template type="amp-mustache">
-                            <div class="m1 alert alert-success" role="alert">
-                              Entraremos em contato
-                            </div>
-                          <!--div>
-                              <a href="./v1/img/mentiras.pdf"><button>DOWNLOAD</button></a>
-                          </div-->
-                          </template>
-                      </div>
-                      <div submit-error>
-                          <template type="amp-mustache">
-                            <div class="m1 alert alert-danger" role="alert">
-                              Sua mensagem não foi enviada, tente novamente.
-                            </div>
-                          </template>
-                      </div>
-                    </form>
-                  </div>
-                </div>  
-            </div>
-        </div>  
-      </section>
-      <!--END EBOOK-->
       <!--Beneficios-->
       <div class="bg-white-2 xs-hide sm-hide">
         <section class="wrapper py4 center">
@@ -954,7 +884,7 @@ textarea {
       </section>
       <!--END Contato-->
 </main>
-<footer class="bg-gray-footer">
+<footer class="bg-gray-top">
   <div class="wrapper pt3 pb4">
     <div class="clearfix">
       <div class="sm-col sm-col-8 md-col-8 lg-col-8">
@@ -970,7 +900,7 @@ textarea {
               </div>  
               <div class="sm-col sm-col-6 md-col-6 lg-col-6">
                 <div>
-                  <a class="c-gray-4 text-decoration-none h13 font-helvetica bold" href="https://api.whatsapp.com/send?phone=5511975858673&text=Oi,%20gostaria%20de%20abrir%20meu%20CNPJ">Abrir CNPJ</a> 
+                  <a class="c-gray-4 text-decoration-none h13 font-helvetica bold" href="https://api.whatsapp.com/send?phone=5511964148654&text=Oi,%20gostaria%20de%20abrir%20meu%20CNPJ">Abrir CNPJ</a> 
                 </div>
                 <div>
                   <a class="c-gray-4 text-decoration-none h13 font-helvetica bold" href="#contato">Contato</a> 
@@ -1020,7 +950,7 @@ textarea {
   </div>
 </div>      
 </footer>
-<a href="https://api.whatsapp.com/send?phone=5511975858673&text=Oi,%20gostaria%20de%20de%20mais%20iformações%20da%20pacifico.">
+<a href="https://api.whatsapp.com/send?phone=5511964148654&text=Oi,%20gostaria%20de%20de%20mais%20iformações%20da%20pacifico.">
   <div id="scrollToTopdiv" class="scrollToTop"></div>
 </a>
 </body>
