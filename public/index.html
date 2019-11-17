@@ -28,6 +28,9 @@
         .h7 {
               font-size: 2rem;
         } 
+        .hero-image {
+          background-image: url('./img/bannernovo/img-android@2x.png');
+        }  
       }
       @media (min-width:40em) and (max-width:52em){
         .sm-hide{
@@ -36,6 +39,9 @@
         .h7 {
               font-size: 2rem;
         } 
+        .hero-image {
+          background-image: url('./img/bannernovo/img-android@3x.png');
+        } 
       }
       @media (min-width:52em) and (max-width:64em){
         .md-hide{
@@ -43,18 +49,24 @@
         }
         .h7 {
               font-size: 2.75rem;
-            } 
+        } 
+        .hero-image {
+          background-image: url('./img/bannernovo/bannernovo-1440x448px.png');
+        }     
       }
       @media (min-width:64em){
-            .lg-hide{
-              display:none
-            }
-            .lg-w-90{
-              width: 90%;        
-            }
-            .h7 {
-              font-size: 2.75rem;
-            } 
+        .lg-hide{
+          display:none
+        }
+        .lg-w-90{
+          width: 90%;        
+        }
+        .h7 {
+          font-size: 2.75rem;
+        } 
+        .hero-image {
+          background-image: url('./img/bannernovo/bannernovo-1440x448px@2x.png');
+        }     
     }
     .display-none{
         display:none
@@ -221,7 +233,6 @@ src: local('Neue Haas Grotesk Text Pro Bold Italic'), url('./fonts/neue/NHaasGro
       color: white; /* ADD THIS LINE */
       
       /* Background styles */
-      background-image: url('./img/hero.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -555,7 +566,7 @@ textarea {
         "@type": "Organization",
         "name": "The Publisher",
         "logo": {
-          "url": "https://www.example.com/logo-blue.svg",
+          "url": "./img/logo-negativo.svg",
           "width": 175,
           "height": 60,
           "@type": "ImageObject"
@@ -563,7 +574,7 @@ textarea {
       },
       "image": {
         "@type": "ImageObject",
-        "url": "https://www.example.com/leader.png",
+        "url": "./img/logo-negativo.svg",
         "width": 1200,
         "height": 630
       }
@@ -585,7 +596,7 @@ textarea {
         }
       </script>
     </amp-analytics>
-    <amp-sidebar id="sidebar" class="bg-blue-2" layout="nodisplay" side="right">
+    <amp-sidebar id="sidebar" class="bg-gray-top" layout="nodisplay" side="right">
       <div class="" on="tap:sidebar.close" role="button" tabindex="0">
         <span class="">
           <i class="fas fa-times"></i>
@@ -604,7 +615,7 @@ textarea {
       <div class="clearfix">
         <div class="col col-6 my2 ">
           <div class="pl3">
-              <amp-img alt="logo" src="./img/logo.png" width="179" height="44" layout="fixed"></amp-img>
+              <amp-img alt="logo" src="./img/logo-negativo.svg" width="179" height="44" layout="fixed"></amp-img>
           </div>
         </div>
         <div class="col col-6 my2">
@@ -710,43 +721,6 @@ textarea {
       </div>
     </section>  
       <!--END SERVIÇOS-->
-      <!--Depoimentos-->
-      <!-- <section class="wrapper pb4">
-        <h1>Depoimentos</h1>
-        <amp-carousel height="300"
-        layout="fixed-height"
-        type="slides" controls>
-          <div>
-              <amp-img src="./img/book.png"
-                width="40"
-                height="40"
-                layout="fixed"
-                alt="Assessoria" class="circle">
-              </amp-img>
-              Bruno Figueiredo
-              <div>
-                  <p>
-                      In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet, neque est rhoncus massa TOTVS
-                  </p>
-                </div>
-          </div>
-          <div>
-              <amp-img src="./img/book.png"
-                width="40"
-                height="40"
-                layout="fixed"
-                alt="Assessoria" class="circle">
-              </amp-img>
-              Bruno Figueiredo
-              <div>
-                <p>
-                    In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet, neque est rhoncus massa TOTVS
-                </p>
-              </div>
-          </div>
-        </amp-carousel>
-      </section>   -->
-      <!--END Depoimentos-->
       <!--Beneficios-->
       <div class="bg-white-2 xs-hide sm-hide">
         <section class="wrapper py4 center">
